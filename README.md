@@ -5,7 +5,7 @@
 No installation needed — just run `python3 memscan.py` from the memscan directory.
 
 ```bash
-cd /root/.openclaw/workspace/memscan
+cd memscan
 python3 memscan.py --help
 ```
 
