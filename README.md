@@ -2,6 +2,11 @@ This project is a memory scanning and injection tool designed primarily for Linu
 
 this tool was made in order to test capabilities of my clawdbot ai assistant (Subagent "bobdahacker")
 
+
+
+
+
+
 ## Platform Support
 
 | Feature          | Linux              | Windows                           | macOS |
@@ -49,8 +54,18 @@ Summary:
 # memscan Quickstart Guide
 
 ## Installation
+First:
+pip install -r requirements.txt
 
-No installation needed — just run `python3 memscan.py` from the memscan directory.
+
+What each dependency does:
+psutil — Process listing, PID management, architecture detection
+capstone (optional) — Disassembly for advanced pointer analysis
+
+Everything else is built-in Python: ctypes, struct, json, csv, argparse, os, sys, signal, subprocess, platform, io, enum, datetime, time.
+
+
+ — just run `python3 memscan.py` from the memscan directory.
 
 ```bash
 cd memscan
