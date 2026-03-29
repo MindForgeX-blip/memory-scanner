@@ -55,8 +55,9 @@ Summary:
 
 ## Installation
 First:
+```bash
 pip install -r requirements.txt
-
+```
 
 What each dependency does:
 psutil — Process listing, PID management, architecture detection
