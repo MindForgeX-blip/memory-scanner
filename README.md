@@ -1,3 +1,54 @@
+This project is a memory scanning and injection tool designed primarily for Linux environments. It allows inspection and modification of running processes, along with basic code injection capabilities. While partial support exists for Windows, it has not been fully tested. macOS is not supported.
+
+
+
+
+Platform Support:
+Feature	Linux	                      Windows	                          macOS
+Process listing	✅ Supported	     ⚠️ Untested	                      ❌
+Memory writing	✅ /proc/pid/mem	 ⚠️ WriteProcessMemory (untested)	  ❌
+Code injection	✅ ptrace	         ⚠️ CreateRemoteThread (untested)	  ❌
+DLL injection	❌ Not available	 ⚠️ Exists (untested)	              ❌
+Lua injection	⚠️ Partial           ⚠️ Partial	                          ❌
+
+
+Note:
+This project is primarily developed and tested on Linux.
+Windows support is experimental. macOS is not supported.
+
+
+Anti-Cheat Compatibility:
+Anti-Cheat Type	Memory Scan	Memory Write	Injection
+None (offline / single-player)	✅	✅	✅
+Basic (EAC / BattlEye - limited setups)	⚠️ Partial	❌	❌
+Kernel-level (Vanguard / Hyperion)	❌	❌	❌
+Limitations
+
+
+Modern anti-cheat systems—especially kernel-level protections—operate with higher privileges than this tool.
+
+Why this matters:
+This tool runs in user mode (Ring 3)
+Advanced anti-cheats run in kernel mode (Ring 0)
+
+Because of this, anti-cheat systems can:
+Block memory access (ReadProcessMemory, /proc/pid/mem)
+Detect debugger attachments (ptrace)
+Prevent memory modification
+Stop remote thread creation (injection)
+Scan for known cheat signatures
+
+
+Summary:
+✅ Fully functional on Linux (no anti-cheat)
+⚠️ Experimental on Windows
+❌ Unsupported on macOS
+❌ Ineffective against kernel-level anti-cheat systems
+
+
+
+
+
 # memscan Quickstart Guide
 
 ## Installation
