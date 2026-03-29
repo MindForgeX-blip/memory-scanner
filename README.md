@@ -2,28 +2,25 @@ This project is a memory scanning and injection tool designed primarily for Linu
 
 
 
+## Platform Support
 
-Platform Support:
-Feature	Linux	                      Windows	                          macOS
-Process listing	✅ Supported	     ⚠️ Untested	                      ❌
-Memory writing	✅ /proc/pid/mem	 ⚠️ WriteProcessMemory (untested)	  ❌
-Code injection	✅ ptrace	         ⚠️ CreateRemoteThread (untested)	  ❌
-DLL injection	❌ Not available	 ⚠️ Exists (untested)	              ❌
-Lua injection	⚠️ Partial           ⚠️ Partial	                          ❌
-
-
-Note:
-This project is primarily developed and tested on Linux.
-Windows support is experimental. macOS is not supported.
+| Feature          | Linux              | Windows                           | macOS |
+|------------------|--------------------|-----------------------------------|-------|
+| Process listing  | Yes                | Yes (untested)                    | No    |
+| Memory scanning  | Yes                | Yes (untested)                    | No    |
+| Memory writing   | Yes (/proc/pid/mem)| Yes (WriteProcessMemory, untested)| No    |
+| Code injection   | Yes (ptrace)       | Yes (CreateRemoteThread, untested)| No    |
+| DLL injection    | No                 | Partial (untested)                | No    |
+| Lua injection    | Partial            | Partial                           | No    |
 
 
-Anti-Cheat Compatibility:
-Anti-Cheat Type	Memory Scan	Memory Write	Injection
-None (offline / single-player)	✅	✅	✅
-Basic (EAC / BattlEye - limited setups)	⚠️ Partial	❌	❌
-Kernel-level (Vanguard / Hyperion)	❌	❌	❌
-Limitations
+## Anti-Cheat Compatibility
 
+| Anti-Cheat Type                   | Scan | Write | Inject |
+|----------------------------------|------|-------|--------|
+| None (offline/single-player)     | Yes  | Yes   | Yes    |
+| Basic (EAC/BattlEye)             | Maybe| No    | No     |
+| Kernel-level (Vanguard/Hyperion) | No   | No    | No     |
 
 Modern anti-cheat systems—especially kernel-level protections—operate with higher privileges than this tool.
 
