@@ -1,0 +1,6 @@
+# memscan - CLI Memory Scanner & Editor
+# Core dependencies
+psutil>=5.9.0
+
+# Optional: for advanced disassembly in pointer scanning
+# capstone>=4.0.0
