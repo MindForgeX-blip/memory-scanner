@@ -1,6 +1,6 @@
 This project is a memory scanning and injection tool designed primarily for Linux environments. It allows inspection and modification of running processes, along with basic code injection capabilities. While partial support exists for Windows, it has not been fully tested. macOS is not supported.
 
-
+this tool was made in order to test capabilities of my clawdbot ai assistant (Subagent "bobdahacker")
 
 ## Platform Support
 
